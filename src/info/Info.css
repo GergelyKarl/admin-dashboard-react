@@ -1,0 +1,49 @@
+.info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.info__title {
+  font-size: 20px;
+}
+.info__items {
+  flex: 1;
+  margin: 0px 20px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 1px 3px 7px -1px rgba(0, 0, 0, 0.79);
+}
+
+.info__moneyContainer {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.info__money {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.info__rate {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.info__icon {
+  font-size: 28px !important;
+  margin-left: 5px !important;
+  color: rgb(119, 190, 11);
+}
+
+.info__icon.minus {
+  font-size: 35px !important;
+  color: red;
+}
+
+.info__compare {
+  font-size: 15px;
+  color: gray;
+}
