@@ -1,0 +1,34 @@
+.topbar {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.topbar__wrapper {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.topbar__right {
+  display: flex;
+  align-items: center;
+}
+
+.topbar__icons {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.topbar__avatar {
+  cursor: pointer;
+}
