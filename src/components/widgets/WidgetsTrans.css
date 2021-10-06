@@ -1,0 +1,6 @@
+.widgets__trans{
+    flex: 2;
+    box-shadow: 1px 3px 7px -1px rgba(0, 0, 0, 0.79);
+    padding: 20px;
+    margin-right: 20px;
+}

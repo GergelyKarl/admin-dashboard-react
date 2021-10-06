@@ -6,9 +6,9 @@ export default function Info() {
   return (
     <div className="info">
       <div className="info__items">
-        <span className="info__title">Revanue</span>
+        <span className="info__title">Revenue</span>
         <div className="info__moneyContainer">
-          <span className="info__money">-242345 Ft</span>
+          <span className="info__money">-2423400 Ft</span>
           <span className="info__rate">
             -5.9%{" "}
             <ArrowDownwardIcon className="info__icon minus" />{" "}
@@ -19,9 +19,9 @@ export default function Info() {
         </span>
       </div>
       <div className="info__items">
-        <span className="info__title">Cost</span>
+        <span className="info__title">Costs</span>
         <div className="info__moneyContainer">
-          <span className="info__money">-189868 Ft </span>
+          <span className="info__money">-1898600 Ft </span>
           <span className="info__rate">
             -8.9%{" "}
             <ArrowDownwardIcon className="info__icon minus" />{" "}
@@ -35,8 +35,7 @@ export default function Info() {
         <span className="info__title">Sales</span>
         <div className="info__moneyContainer">
           <span className="info__money">
-            213040
-            <br /> Ft{" "}
+            2130400 Ft{" "}
           </span>
           <span className="info__rate">
             11.9 <ArrowUpwardIcon className="info__icon" />{" "}

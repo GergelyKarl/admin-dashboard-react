@@ -4,3 +4,8 @@
     margin-top: 15px;
 }
 
+.transactions{
+    display: flex;
+    margin: 20px;
+}
+
