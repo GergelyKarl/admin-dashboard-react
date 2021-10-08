@@ -1,6 +1,55 @@
-.widgets__trans{
-    flex: 2;
-    box-shadow: 1px 3px 7px -1px rgba(0, 0, 0, 0.79);
-    padding: 20px;
-    margin-right: 20px;
+.widget__transactions {
+  flex: 2;
+  box-shadow: 1px 3px 7px 1px rgba(0, 0, 0, 0.79);
+  padding: 40px;
+  margin:20px 10px 0 25px;
+}
+
+.widget__transactions__title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.widget__transactions__table__user__image {
+  height: 40px;
+  object-fit: cover;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.widget__transactions__table {
+  width: 100%;
+  border-spacing: 15px;
+}
+.widget__transactions__table__th {
+  text-align: left;
+}
+
+.widget__transactions__table__user {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.widget__transactions__table__user__date,.widget__transactions__table__user__amount{
+    font-weight: 300;
+}
+.widget__transactions__table__button {
+    padding: 5px 7px;
+    border: none;
+    border-radius: 10px;
+  }
+  
+.widget__transactions__table__button.Approved {
+  background-color: #e5faf2;
+  color: #3bb077;
+}
+.widget__transactions__table__button.Declined {
+  background-color: #fff0f1;
+  color: #d55087;
+}
+.widget__transactions__table__button.Pending {
+  background-color: #ebf1fe;
+  color: #3b5eb0;
 }
