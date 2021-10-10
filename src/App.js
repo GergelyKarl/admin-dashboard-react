@@ -1,10 +1,13 @@
 import React from "react";
+import "./app.css";
 import Sidebar from "./components/Sidebar";
 import Topbar from "./components/Topbar";
-import "./app.css";
 import Home from "./pages/home/Home";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import UserList from "./userList/UserList";
+import User from "./pages/user/User";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import NewUser from "./pages/newUser/NewUser";
+import ProductList from "./pages/productList/ProductList";
 
 function App() {
   return (
@@ -19,6 +22,21 @@ function App() {
             </Route>
             <Route path="/users">
               <UserList />
+            </Route>
+            <Route path="/user/:userId">
+              <User />
+            </Route>
+            <Route path="/newuser">
+              <NewUser />
+            </Route>
+            <Route path="/products">
+              <ProductList />
+            </Route>
+            <Route path="/product/:productId">
+              <User />
+            </Route>
+            <Route path="/newproduct">
+              <NewUser />
             </Route>
           </Switch>
         </div>

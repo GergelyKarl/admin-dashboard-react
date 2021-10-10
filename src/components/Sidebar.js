@@ -13,6 +13,7 @@ import WorkIcon from "@mui/icons-material/Work";
 import AddTaskIcon from "@mui/icons-material/AddTask";
 import ReportProblemIcon from "@mui/icons-material/ReportProblem";
 import DescriptionIcon from "@mui/icons-material/Description";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   return (
@@ -21,55 +22,51 @@ export default function Sidebar() {
         <div className="sidebar__menu">
           <div className="sidebar__title">Dashboard</div>
           <ul className="sidebar__list">
-            <li className="sidebar__listItem active">
-              <LineStyleIcon className="sidebar__icon" />{" "}
-              Home
+            <Link to="/" className="link">
+              <li className="sidebar__listItem active">
+                <LineStyleIcon className="sidebar__icon" /> Home
+              </li>
+            </Link>
+            <li className="sidebar__listItem">
+              <TimelineIcon className="sidebar__icon" /> Analytics
             </li>
             <li className="sidebar__listItem">
-              <TimelineIcon className="sidebar__icon" />{" "}
-              Analytics
-            </li>
-            <li className="sidebar__listItem">
-              <TrendingUpIcon className="sidebar__icon" />{" "}
-              Sales
+              <TrendingUpIcon className="sidebar__icon" /> Sales
             </li>
           </ul>
         </div>
         <div className="sidebar__menu">
           <div className="sidebar__title">Quick Menu</div>
           <ul className="sidebar__list">
-            <li className="sidebar__listItem ">
-              <PeopleIcon className="sidebar__icon" /> Users
+            <Link to="/users" className="link">
+              <li className="sidebar__listItem ">
+                <PeopleIcon className="sidebar__icon" /> Users
+              </li>
+            </Link>
+            <Link to="/products" className="link">
+              <li className="sidebar__listItem">
+                <StorefrontIcon className="sidebar__icon" /> Products
+              </li>
+            </Link>
+            <li className="sidebar__listItem">
+              <AttachMoneyIcon className="sidebar__icon" /> Transactions
             </li>
             <li className="sidebar__listItem">
-              <StorefrontIcon className="sidebar__icon" />{" "}
-              Products
-            </li>
-            <li className="sidebar__listItem">
-              <AttachMoneyIcon className="sidebar__icon" />{" "}
-              Transactions
-            </li>
-            <li className="sidebar__listItem">
-              <DescriptionIcon className="sidebar__icon" />{" "}
-              Reports
+              <DescriptionIcon className="sidebar__icon" /> Reports
             </li>
           </ul>
         </div>
         <div className="sidebar__menu">
-          <div className="sidebar__title">
-            Notifications
-          </div>
+          <div className="sidebar__title">Notifications</div>
           <ul className="sidebar__list">
             <li className="sidebar__listItem active">
               <EmailIcon className="sidebar__icon" /> Mail
             </li>
             <li className="sidebar__listItem">
-              <DynamicFeedIcon className="sidebar__icon" />{" "}
-              Feedback
+              <DynamicFeedIcon className="sidebar__icon" /> Feedback
             </li>
             <li className="sidebar__listItem">
-              <MessageIcon className="sidebar__icon" />{" "}
-              Messages
+              <MessageIcon className="sidebar__icon" /> Messages
             </li>
           </ul>
         </div>
@@ -80,12 +77,10 @@ export default function Sidebar() {
               <WorkIcon className="sidebar__icon" /> Manage
             </li>
             <li className="sidebar__listItem">
-              <AddTaskIcon className="sidebar__icon" />{" "}
-              Tasks
+              <AddTaskIcon className="sidebar__icon" /> Tasks
             </li>
             <li className="sidebar__listItem">
-              <ReportProblemIcon className="sidebar__icon" />{" "}
-              Warnings
+              <ReportProblemIcon className="sidebar__icon" /> Warnings
             </li>
           </ul>
         </div>

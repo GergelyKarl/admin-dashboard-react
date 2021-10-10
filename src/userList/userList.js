@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./UserList.css";
 import { DataGrid } from "@mui/x-data-grid";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { rows } from "../MockData";
+import { Link } from "react-router-dom";
 
-export default function userList() {
+export default function UserList() {
+  const [data, setData] = useState(rows);
+  const handleDelete = (id) => {
+    let filteredArray = data.filter((item, index) => item.id !== id);
+    setData(filteredArray);
+  };
+  console.log(data);
+
   const columns = [
     { field: "id", headerName: "ID", width: 40 },
-
     {
       field: "user",
       headerName: "User",
@@ -51,69 +59,13 @@ export default function userList() {
       renderCell: (params) => {
         return (
           <>
-            <button className="userList__button">Edit</button>
-            <DeleteIcon className="userList__delete" />
+            <Link to={"/users/" + params.row.id}>
+              <button className="userList__button">Edit</button>
+            </Link>
+            <DeleteIcon className="userList__delete" onClick={() => handleDelete(params.row.id)} />
           </>
         );
       },
-    },
-  ];
-
-  const rows = [
-    {
-      id: 1,
-      username: "John Snow",
-      avatar:
-        "https://images.unsplash.com/photo-1550950545-12f0a5b6103e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTMwfHxqb2huJTIwc25vd3xlbnwwfDJ8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60",
-      email: "john@snow.com",
-      status: "active",
-      transaction: "87500",
-    },
-    {
-      id: 2,
-      username: "John Snow",
-      avatar:
-        "https://images.unsplash.com/photo-1550950545-12f0a5b6103e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTMwfHxqb2huJTIwc25vd3xlbnwwfDJ8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60",
-      email: "john@snow.com",
-      status: "active",
-      transaction: "80000",
-    },
-    {
-      id: 3,
-      username: "John Snow",
-
-      avatar:
-        "https://images.unsplash.com/photo-1550950545-12f0a5b6103e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTMwfHxqb2huJTIwc25vd3xlbnwwfDJ8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60",
-      email: "john@snow.com",
-      status: "active",
-      transaction: "52000",
-    },
-    {
-      id: 4,
-      username: "John Snow",
-      avatar:
-        "https://images.unsplash.com/photo-1550950545-12f0a5b6103e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTMwfHxqb2huJTIwc25vd3xlbnwwfDJ8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60",
-      email: "john@snow.com",
-      status: "active",
-      transaction: "87500",
-    },
-    {
-      id: 5,
-      username: "John Snow",
-      avatar:
-        "https://images.unsplash.com/photo-1550950545-12f0a5b6103e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTMwfHxqb2huJTIwc25vd3xlbnwwfDJ8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60",
-      email: "john@snow.com",
-      status: "active",
-      transaction: "102000",
-    },
-    {
-      id: 6,
-      username: "John Snow",
-      avatar:
-        "https://images.unsplash.com/photo-1550950545-12f0a5b6103e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTMwfHxqb2huJTIwc25vd3xlbnwwfDJ8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60",
-      email: "john@snow.com",
-      status: "active",
-      transaction: "78000",
     },
   ];
 
@@ -121,7 +73,7 @@ export default function userList() {
     <div className="userList" style={{ color: "black" }}>
       <div style={{ height: 400, width: "100%" }}>
         <DataGrid
-          rows={rows}
+          rows={data}
           disableSelectionOnClick
           columns={columns}
           pageSize={5}

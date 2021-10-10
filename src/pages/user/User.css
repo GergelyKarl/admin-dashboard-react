@@ -1,0 +1,154 @@
+.user {
+  flex: 4;
+}
+
+.user__title__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.user__title {
+  color: #777;
+}
+
+.user__addButton {
+  width: 80px;
+  border: none;
+  padding: 5px;
+  background-color: teal;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+}
+
+.user__container {
+  display: flex;
+}
+
+.user__display {
+  flex: 1;
+  padding: 20px;
+  box-shadow: 1px 3px 7px 1px rgba(0, 0, 0, 0.79);
+  margin-left: 20px;
+}
+
+.user__display__top {
+  display: flex;
+  align-items: center;
+}
+
+.user__display__image {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user__display__top__title {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+}
+
+.user__display__username {
+  font-weight: 600;
+}
+.user__display__title {
+  font-weight: 300;
+}
+
+.user__display__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(177, 170, 170);
+}
+
+.user__display__bottom {
+  margin-top: 20px;
+}
+
+.user__display__info {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  color: #555;
+}
+.user__display__icon {
+  font-size: 18px !important;
+}
+.user__display__info__title {
+  margin-left: 10px;
+}
+
+.user__update {
+  flex: 2;
+  margin-left: 20px;
+  box-shadow: 1px 3px 7px 1px rgba(0, 0, 0, 0.79);
+  padding: 25px;
+}
+
+.user__update__image {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+.user__update__title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.user__update__form {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.user__update__item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.user__update__item > label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.user__update__input {
+  border: none;
+  width: 250px;
+  border-bottom: 1px solid;
+}
+
+.user__update__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user__update__upload {
+  display: flex;
+  align-items: center;
+}
+
+.user__update__upload__icon {
+  cursor: pointer;
+  font-size: 28px !important;
+  margin-left: 20px;
+}
+
+.user__update__button {
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: darkblue;
+  color: white;
+  font-weight: bolder;
+}
