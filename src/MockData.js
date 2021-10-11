@@ -44,9 +44,57 @@ export const data = [
     Users: 89,
   },
 ];
+///
+
+export const productData = [
+  {
+    name: "Jan",
+    Sales: 56,
+  },
+  {
+    name: "Feb",
+    Sales: 34,
+  },
+  {
+    name: "Mar",
+    Sales: 38,
+  },
+  {
+    name: "Apr",
+    Sales: 49,
+  },
+  {
+    name: "May",
+    Sales: 76,
+  },
+  {
+    name: "Jun",
+    Sales: 84,
+  },
+  {
+    name: "Jul",
+    Sales: 56,
+  },
+  {
+    name: "Aug",
+    Sales: 78,
+  },
+  {
+    name: "Sep",
+    Sales: 36,
+  },
+  {
+    name: "Oct",
+    Sales: 46,
+  },
+  {
+    name: "Dec",
+    Sales: 89,
+  },
+];
 
 
-//Mock Users
+//Mock users
 
 export const rows = [
   {
@@ -105,7 +153,6 @@ export const rows = [
     transaction: "78000",
   },
 ];
-
 
 export const productRows = [
   {
