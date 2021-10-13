@@ -9,7 +9,8 @@ export default function WidgetsTrans() {
     <div className="widget__transactions">
       <h3 className="widget__transactions__title">Latest Transactions</h3>
       <table className="widget__transactions__table">
-        <tr className="widget__transactions__table__tr">
+        <tbody>
+        <tr className="widget__headansactions__table__tr">
           <th className="widget__transactions__table__th">Customer</th>
           <th className="widget__transactions__table__th">Date</th>
           <th className="widget__transactions__table__th">Amount</th>
@@ -75,6 +76,7 @@ export default function WidgetsTrans() {
             <ButtonComp type="Approved" />
           </td>
         </tr>
+        </tbody>
       </table>
     </div>
   );

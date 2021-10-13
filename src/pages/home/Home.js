@@ -6,7 +6,7 @@ import { data } from "../../MockData";
 import WidgetsTrans from "../../components/widgets/WidgetsTrans";
 import WidgetsUsers from "../../components/widgets/WidgetsUsers";
 export default function Home() {
-  console.log("asd");
+
   return (
     <div className="home">
       <Info />

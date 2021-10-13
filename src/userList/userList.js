@@ -11,14 +11,14 @@ export default function UserList() {
     let filteredArray = data.filter((item, index) => item.id !== id);
     setData(filteredArray);
   };
-  console.log(data);
+
 
   const columns = [
     { field: "id", headerName: "ID", width: 40 },
     {
       field: "user",
       headerName: "User",
-      width: 130,
+      width: 280,
       renderCell: (params) => {
         return (
           <div className="userList__user">
@@ -28,11 +28,7 @@ export default function UserList() {
         );
       },
     },
-    {
-      field: "avatar",
-      headerName: "avatar",
-      width: 190,
-    },
+
     {
       field: "transaction",
       headerName: "Transaction",
@@ -44,7 +40,7 @@ export default function UserList() {
       field: "email",
       headerName: "email",
       sortable: true,
-      width: 160,
+      width: 260,
     },
     {
       field: "status",
@@ -59,7 +55,7 @@ export default function UserList() {
       renderCell: (params) => {
         return (
           <>
-            <Link to={"/users/" + params.row.id}>
+            <Link to={"/user/" + params.row.id}>
               <button className="userList__button">Edit</button>
             </Link>
             <DeleteIcon className="userList__delete" onClick={() => handleDelete(params.row.id)} />
@@ -72,13 +68,16 @@ export default function UserList() {
   return (
     <div className="userList" style={{ color: "black" }}>
       <div style={{ height: 400, width: "100%" }}>
+        <h1 className="userList__title">Manage Users</h1>
         <DataGrid
+        className="datagrid"
           rows={data}
           disableSelectionOnClick
           columns={columns}
           pageSize={5}
           rowsPerPageOptions={[5]}
           checkboxSelection
+          autoHeight
         />
       </div>
     </div>

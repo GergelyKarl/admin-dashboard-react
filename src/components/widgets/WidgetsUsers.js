@@ -5,7 +5,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 export default function WidgetsUsers() {
   return (
     <div className="widget__users">
-      <h3 className="widget__users__title">New Users</h3>
+      <h3 className="widget__users__title">Latest Members</h3>
       <ul className="widget__users__list">
         <li className="widget__users__item">
           <img

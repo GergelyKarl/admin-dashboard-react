@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Sidebar.css";
 import LineStyleIcon from "@mui/icons-material/LineStyle";
 import TimelineIcon from "@mui/icons-material/Timeline";
@@ -16,6 +16,9 @@ import DescriptionIcon from "@mui/icons-material/Description";
 import { Link } from "react-router-dom";
 
 export default function Sidebar() {
+  const [count, setCount] = useState(0);
+ 
+
   return (
     <div className="sidebar">
       <div className="sidebar__wrapper">
@@ -23,33 +26,43 @@ export default function Sidebar() {
           <div className="sidebar__title">Dashboard</div>
           <ul className="sidebar__list">
             <Link to="/" className="link">
-              <li className="sidebar__listItem active">
+              <li
+                className={count === 0 ? "sidebar__listItem active" : "sidebar__listItem"}
+                onClick={() => setCount(0)}
+              >
                 <LineStyleIcon className="sidebar__icon" /> Home
               </li>
             </Link>
-            <li className="sidebar__listItem">
-              <TimelineIcon className="sidebar__icon" /> Analytics
-            </li>
-            <li className="sidebar__listItem">
-              <TrendingUpIcon className="sidebar__icon" /> Sales
-            </li>
+            <Link to="/users" className="link">
+              <li
+                className={count === 1 ? "sidebar__listItem active" : "sidebar__listItem"}
+                onClick={() => setCount(1)}
+              >
+                <PeopleIcon className="sidebar__icon" /> Users
+              </li>
+            </Link>
+            <Link to="/products" className="link">
+              <li
+                className={count === 2 ? "sidebar__listItem active" : "sidebar__listItem"}
+                onClick={() => setCount(2)}
+              >
+                <StorefrontIcon className="sidebar__icon" /> Products
+              </li>
+            </Link>
           </ul>
         </div>
         <div className="sidebar__menu">
           <div className="sidebar__title">Quick Menu</div>
           <ul className="sidebar__list">
-            <Link to="/users" className="link">
-              <li className="sidebar__listItem ">
-                <PeopleIcon className="sidebar__icon" /> Users
-              </li>
-            </Link>
-            <Link to="/products" className="link">
-              <li className="sidebar__listItem">
-                <StorefrontIcon className="sidebar__icon" /> Products
-              </li>
-            </Link>
+            <li className="sidebar__listItem">
+              <TimelineIcon className="sidebar__icon" /> Analytics
+            </li>
+
             <li className="sidebar__listItem">
               <AttachMoneyIcon className="sidebar__icon" /> Transactions
+            </li>
+            <li className="sidebar__listItem">
+              <TrendingUpIcon className="sidebar__icon" /> Sales
             </li>
             <li className="sidebar__listItem">
               <DescriptionIcon className="sidebar__icon" /> Reports
@@ -59,7 +72,7 @@ export default function Sidebar() {
         <div className="sidebar__menu">
           <div className="sidebar__title">Notifications</div>
           <ul className="sidebar__list">
-            <li className="sidebar__listItem active">
+            <li className="sidebar__listItem ">
               <EmailIcon className="sidebar__icon" /> Mail
             </li>
             <li className="sidebar__listItem">
@@ -73,7 +86,7 @@ export default function Sidebar() {
         <div className="sidebar__menu">
           <div className="sidebar__title">Staff</div>
           <ul className="sidebar__list">
-            <li className="sidebar__listItem active">
+            <li className="sidebar__listItem ">
               <WorkIcon className="sidebar__icon" /> Manage
             </li>
             <li className="sidebar__listItem">

@@ -14,11 +14,11 @@ export default function ProductList() {
   };
 
   const columns = [
-    { field: "id", headerName: "ID", width: 40 },
+    { field: "id", headerName: "ID", width: 50 },
     {
       field: "product",
       headerName: "Product",
-      width: 130,
+      width: 230,
       renderCell: (params) => {
         return (
           <div className="productList__product">
@@ -28,11 +28,7 @@ export default function ProductList() {
         );
       },
     },
-    {
-      field: "image",
-      headerName: "Image",
-      width: 190,
-    },
+ 
     {
       field: "price",
       headerName: "Price",
@@ -43,14 +39,14 @@ export default function ProductList() {
     {
       field: "stock",
       headerName: "Stock",
+      width: 180,
       sortable: true,
-      width: 160,
     },
     {
       field: "status",
       headerName: "status",
       sortable: true,
-      width: 100,
+      width: 130,
     },
     {
       field: "action",
@@ -71,13 +67,16 @@ export default function ProductList() {
 
   return (
     <div className="productList">
+      <h1 className="productList__title">Manage Products</h1>
       <DataGrid
+        className="datagrid"
         rows={data}
         disableSelectionOnClick
         columns={columns}
         pageSize={5}
         rowsPerPageOptions={[5]}
         checkboxSelection
+        autoHeight
       />
     </div>
   );

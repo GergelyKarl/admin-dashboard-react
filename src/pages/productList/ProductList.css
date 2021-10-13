@@ -2,6 +2,16 @@
   flex: 4;
 }
 
+.datagrid {
+  width: 70%;
+  margin-left: 40px;
+}
+
+.productList__title {
+  margin-left: 40px;
+  margin-bottom: 30px;
+}
+
 .productList__product {
   display: flex;
   align-items: center;
